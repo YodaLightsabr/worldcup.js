@@ -1,0 +1,29 @@
+{
+  "name": "worldcup.js",
+  "version": "0.1.0",
+  "description": "World Cup API client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yodalightsabr/worldcup.js.git"
+  },
+  "keywords": [
+    "world-cup",
+    "qatar2022",
+    "fifa",
+    "football"
+  ],
+  "bugs": {
+    "url": "https://github.com/yodalightsabr/worldcup.js/issues"
+  },
+  "homepage": "https://github.com/yodalightsabr/worldcup.js#readme",
+  "dependencies": {
+    "@api-blueprints/pathmaker": "^1.2.1",
+    "node-fetch": "^2.6.7"
+  }
+}
