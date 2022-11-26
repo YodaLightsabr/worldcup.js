@@ -72,71 +72,71 @@ console.log(teams.toArray()); // -> [ Team, Team, ... ]
 
 Properties:
 
-    * `id`: `id<Match>` A unique ID for this match
-        * Example: `match_5`
-    * `number`: `number` Match number
-    * `venue`: `string` Stadium / venue name
-    * `status`: `string` Match status
-    * `attendance`: `number` Number of people in attendance
-    * `stageName`: `string` Stage name
-    * `timestamp`: `Date` Match timestamp
-    * `lastUpdated`: `Date` Last checked from API
-    * `lastChanged`: `Date` Last time data was modified
-    * `homeTeam`: `MatchTeam?` The home team as a [`MatchTeam`](#matchteam) ([`Team`](#team) related to a [`Match`](#match)). Only returned if a detailed request is made.
-    * `awayTeam`: `MatchTeam?` The away team as a [`MatchTeam`](#matchteam) ([`Team`](#team) related to a [`Match`](#match)). Only available if a detailed request is made.
-    * `homeTeamId`: `id<Team>?` An ID that can be used to fetch a team.
-        * Example: `team_USA`
-    * `homeTeamCountry`: `string?` A 3-digit country code
-    * `awayTeamId`: `id<Team>?` An ID that can be used to fetch a team.
-    * `awayTeamCountry`: `string?` A 3-digit country code
-    * `weather`: `MatchWeather?` Match weather details as a [`MatchTime`](#matchweather) object. Only available if a detailed request is made.
-    * `detailedTime`: `MatchTime?` Match time details as a [`MatchWeather`](#matchtime) object. Only available if a detailed request is made.
+- `id`: `id<Match>` A unique ID for this match
+    - Example: `match_5`
+- `number`: `number` Match number
+- `venue`: `string` Stadium / venue name
+- `status`: `string` Match status
+- `attendance`: `number` Number of people in attendance
+- `stageName`: `string` Stage name
+- `timestamp`: `Date` Match timestamp
+- `lastUpdated`: `Date` Last checked from API
+- `lastChanged`: `Date` Last time data was modified
+- `homeTeam`: `MatchTeam?` The home team as a [`MatchTeam`](#matchteam) ([`Team`](#team) related to a [`Match`](#match)). Only returned if a detailed request is made.
+- `awayTeam`: `MatchTeam?` The away team as a [`MatchTeam`](#matchteam) ([`Team`](#team) related to a [`Match`](#match)). Only available if a detailed request is made.
+- `homeTeamId`: `id<Team>?` An ID that can be used to fetch a team.
+    - Example: `team_USA`
+- `homeTeamCountry`: `string?` A 3-digit country code
+- `awayTeamId`: `id<Team>?` An ID that can be used to fetch a team.
+- `awayTeamCountry`: `string?` A 3-digit country code
+- `weather`: `MatchWeather?` Match weather details as a [`MatchTime`](#matchweather) object. Only available if a detailed request is made.
+- `detailedTime`: `MatchTime?` Match time details as a [`MatchWeather`](#matchtime) object. Only available if a detailed request is made.
 
 ### `Group`
 
 Properties:
 
-    * `id`: `id<Group>` A unique ID for this group
-        * Example: `group_B`
-    * `letter`: `string` The group's letter
-    * `teams`: `Collection<id, Team>` The group's teams
+- `id`: `id<Group>` A unique ID for this group
+    - Example: `group_B`
+- `letter`: `string` The group's letter
+- `teams`: `Collection<id, Team>` The group's teams
 
 ### `Team`
 
 Properties:
 
-    * `id`: `id<Team>` A unique ID for this team
-        * Example: `team_ENG`
-    * `country`: `string` A 3-digit FIFA country code for this team
-    * `name`: `string` The country name of this team
-    * `groupPoints`: `number` How many points this team has in the group stage
-    * `wins`: `number` How many wins this team has
-    * `losses`: `number` How many losses this team has
-    * `goalsFor`: `number` Goals for this team
-    * `goalsAgainst`: `number` Goals against this team
-    * `goalDifferential`: `number` Difference in goals scored to goals against
+- `id`: `id<Team>` A unique ID for this team
+    - Example: `team_ENG`
+- `country`: `string` A 3-digit FIFA country code for this team
+- `name`: `string` The country name of this team
+- `groupPoints`: `number` How many points this team has in the group stage
+- `wins`: `number` How many wins this team has
+- `losses`: `number` How many losses this team has
+- `goalsFor`: `number` Goals for this team
+- `goalsAgainst`: `number` Goals against this team
+- `goalDifferential`: `number` Difference in goals scored to goals against
 
 ### `MatchTime`
 
 Properties:
 
-    * `id`: `id<MatchTime>` A unique ID for this match's time
-        * Example: `time_5`
-    * `currentTime`: The current time
-    * `firstHalfTime`: The first half time
-    * `firstHalfExtraTime`: The first half extra time
-    * `secondHalfTime`: The second half time
-    * `secondHalfExtraTime`: The second half extra time
+- `id`: `id<MatchTime>` A unique ID for this match's time
+    - Example: `time_5`
+- `currentTime`: The current time
+- `firstHalfTime`: The first half time
+- `firstHalfExtraTime`: The first half extra time
+- `secondHalfTime`: The second half time
+- `secondHalfExtraTime`: The second half extra time
 
 ### `MatchWeather`
 
 Properties:
 
-    * `id`: `id<MatchWeather>` A unique ID for this match's weather
-        * Example: `weather_5`
-    * `humidity`: `number` Relative humidity percent
-        * Example: `57`
-    * `temperatureFarenheit`: `number` Current temperature in degrees Celsius
-    * `temperatureCelsius`: `number` Current temperature in degrees Farenheit 
-    * `windSpeed`: `number` Current windspeed at match
-    * `description`: `string` Current conditions description
+- `id`: `id<MatchWeather>` A unique ID for this match's weather
+    - Example: `weather_5`
+- `humidity`: `number` Relative humidity percent
+    - Example: `57`
+- `temperatureFarenheit`: `number` Current temperature in degrees Celsius
+- `temperatureCelsius`: `number` Current temperature in degrees Farenheit 
+- `windSpeed`: `number` Current windspeed at match
+- `description`: `string` Current conditions description
