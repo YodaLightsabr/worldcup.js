@@ -69,7 +69,9 @@ console.log(teams.toArray()); // -> [ Team, Team, ... ]
 ## Reference
 
 ### `Match`
+
 Properties:
+
     * `id`: `id<Match>` A unique ID for this match
         * Example: `match_5`
     * `number`: `number` Match number
@@ -91,14 +93,18 @@ Properties:
     * `detailedTime`: `MatchTime?` Match time details as a [`MatchWeather`](#matchtime) object. Only available if a detailed request is made.
 
 ### `Group`
+
 Properties:
+
     * `id`: `id<Group>` A unique ID for this group
         * Example: `group_B`
     * `letter`: `string` The group's letter
     * `teams`: `Collection<id, Team>` The group's teams
 
 ### `Team`
+
 Properties:
+
     * `id`: `id<Team>` A unique ID for this team
         * Example: `team_ENG`
     * `country`: `string` A 3-digit FIFA country code for this team
@@ -111,7 +117,9 @@ Properties:
     * `goalDifferential`: `number` Difference in goals scored to goals against
 
 ### `MatchTime`
+
 Properties:
+
     * `id`: `id<MatchTime>` A unique ID for this match's time
         * Example: `time_5`
     * `currentTime`: The current time
@@ -121,7 +129,9 @@ Properties:
     * `secondHalfExtraTime`: The second half extra time
 
 ### `MatchWeather`
+
 Properties:
+
     * `id`: `id<MatchWeather>` A unique ID for this match's weather
         * Example: `weather_5`
     * `humidity`: `number` Relative humidity percent
