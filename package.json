@@ -1,6 +1,6 @@
 {
   "name": "worldcup.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "World Cup API client",
   "author": "Yoda",
   "license": "MIT",
@@ -31,7 +31,7 @@
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"    
+      "import": "./dist/index.mjs"
     }
   },
   "scripts": {
