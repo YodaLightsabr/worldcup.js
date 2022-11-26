@@ -1,7 +1,7 @@
 const { APIError } = require('./utils.js');
 const { default: API } = require('@api-blueprints/pathmaker');
 
-const api = (baseUrl) => new API({
+const api = (baseUrl, limiter) => new API({
     headers: {
         'Accept': 'application/json'
     },
@@ -15,6 +15,7 @@ const api = (baseUrl) => new API({
         if (json?.message) throw new APIError(json.message);
         return json;
     },
+    rateLimitHandler: limiter,
     baseUrl: baseUrl
 }); 
 

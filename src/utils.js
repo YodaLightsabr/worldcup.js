@@ -12,21 +12,6 @@ class APIError extends Error {
     }
 }
 
-class RateLimitController {
-    constructor (requestsPer, unitOfTimeInSeconds) {
-        this.per = requestsPer;
-        this.seconds = unitOfTimeInSeconds;
-    }
-
-    get perSecond () {
-        return this.per / this.seconds;
-    }
-
-    get perMinute () {
-        return this.perSecond * 60;
-    }
-}
-
 function formatDate (date) {
     let d = new Date(date);
     let month = '' + (d.getMonth() + 1);
@@ -45,6 +30,7 @@ function formatDate (date) {
 module.exports = {
     parseId: (id) => id.substring(id.indexOf('_') + 1),
     isIdResolvable: (id, type) => typeof id == 'string' && id.startsWith(type + '_'),
+    sleep: (ms) => new Promise(resolve => setTimeout(resolve, ms)),
     formatDate,
     DataError,
     APIError

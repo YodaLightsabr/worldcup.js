@@ -13,7 +13,8 @@ const items = {
     MatchWeather: require('./classes/MatchWeather.js'),
     cacheUtil: require('./cache.js'),
     Collection: require('./classes/Collection.js'),
-    Manager: require('./classes/Manager')
+    Manager: require('./classes/Manager'),
+    utils: require('./utils.js')
 }
 
 module.exports = (baseEndpoint) => new Client(baseEndpoint);
