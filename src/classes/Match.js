@@ -57,12 +57,12 @@ class Match extends BaseData {
         this.id = `match_${this.number}`;
     }
 
-    static async get (id, client) {
+    static async fetch (id, client) {
         const data = await client.api.matches[parseId(id)].get();
         return new Match(client, data);
     }
 
-    async get (id) {
+    async fetch (id) {
         const data = new Match(this.client, await this.client.api.matches[parseId(id ?? this.id)].get());
 
         for (const item in data) {

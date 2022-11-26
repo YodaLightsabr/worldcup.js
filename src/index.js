@@ -8,5 +8,8 @@ module.exports = {
     TeamManager: require('./classes/TeamManager.js'),
     MatchTeam: require('./classes/MatchTeam.js'),
     MatchTime: require('./classes/MatchTime.js'),
-    MatchWeather: require('./classes/MatchWeather.js')
+    MatchWeather: require('./classes/MatchWeather.js'),
+    cacheUtil: require('./cache.js'),
+    Collection: require('./classes/Collection.js'),
+    Manager: require('./classes/Manager')
 }

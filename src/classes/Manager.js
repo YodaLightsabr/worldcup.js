@@ -1,3 +1,5 @@
+const { isIdResolvable } = require('../utils.js');
+
 class Manager {
     constructor (client, endpoint, DataClass) {
         this.client = client;
@@ -5,8 +7,8 @@ class Manager {
         this._DataClass = DataClass;
     }
 
-    async get () {
-
+    static _isResolvable (id, type) {
+        return isIdResolvable(id, type);
     }
 }
 

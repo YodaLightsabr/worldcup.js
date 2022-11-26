@@ -32,11 +32,11 @@ class Team extends BaseData {
         this.id = `team_${this.country}`;
     }
 
-    static async get (id, client) {
+    static async fetch (id, client) {
         return new Team(client, await client.api.teams[parseId(id)].get());
     }
 
-    async get (id) {
+    async fetch (id) {
         const data = new Team(this.client, await this.client.api.teams[parseId(id ?? this.id)].get());
 
         for (const item in data) {

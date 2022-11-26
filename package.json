@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/yodalightsabr/worldcup.js#readme",
   "dependencies": {
-    "@api-blueprints/pathmaker": "^1.2.1",
+    "@api-blueprints/pathmaker": "^1.3.0",
     "node-fetch": "^2.6.7"
   }
 }
