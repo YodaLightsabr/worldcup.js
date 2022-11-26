@@ -1,6 +1,6 @@
-const { Client, Collection, Manager } = require('../src/index.js');
+const worldcup = require('../src/index.js');
 
-const client = new Client();
+const client = worldcup();
 
 // client.matches.fetch({ dateRange: 'today' }).then(console.log);
 

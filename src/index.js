@@ -1,5 +1,7 @@
-module.exports = {
-    Client: require('./classes/Client.js'),
+const Client = require('./classes/Client.js');
+
+const items = {
+    Client,
     Group: require('./classes/Group.js'),
     GroupManager: require('./classes/GroupManager.js'),
     Match: require('./classes/Match.js'),
@@ -12,4 +14,10 @@ module.exports = {
     cacheUtil: require('./cache.js'),
     Collection: require('./classes/Collection.js'),
     Manager: require('./classes/Manager')
+}
+
+module.exports = (baseEndpoint) => new Client(baseEndpoint);
+
+for (const item in items) {
+    module.exports[item] = items[item];
 }
