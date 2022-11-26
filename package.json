@@ -2,6 +2,10 @@
   "name": "worldcup.js",
   "version": "0.3.1",
   "description": "World Cup API client",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Yoda",
   "license": "MIT",
   "repository": {
@@ -25,18 +29,5 @@
   },
   "devDependencies": {
     "tsup": "^6.5.0"
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "scripts": {
-    "build": "tsup src/index.js --format cjs,esm --clean",
-    "watch": "npm run build -- --watch src",
-    "prepublishOnly": "npm run build"
   }
 }

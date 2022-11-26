@@ -12,4 +12,10 @@ yarn add worldcup.js
 
 ## Usage
 
-Usage docs coming soon
+```js
+// cjs
+const { Client } = require('worldcup.js');
+
+// esm
+const { }
+```
