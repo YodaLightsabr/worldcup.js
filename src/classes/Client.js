@@ -8,6 +8,10 @@ const cacheUtil = require('../cache.js');
 const { RateLimiter } = require('limiter');
 
 class Client {
+    /**
+     * Instantiate the client
+     * @param {string} baseEndpoint Base endpoint as URL. Defaults to worldcupjson.net
+     */
     constructor (baseEndpoint = "https://worldcupjson.net") {
         this.baseEndpoint = baseEndpoint;
 
@@ -24,8 +28,20 @@ class Client {
         return await this.limiter.removeTokens(1);
     }
 
+    /**
+     * Internal API wrapper
+     */
     get api () {
         return api(this.baseEndpoint, this.rateLimitHandler.bind(this));
+    }
+
+    /**
+     * Load API data into cache
+     */
+    async load () {
+        await this.groups.fetch();
+        await this.matches.fetch({ detailed: true });
+        await this.teams.fetch();
     }
 }
 

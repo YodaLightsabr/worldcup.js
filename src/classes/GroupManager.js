@@ -7,6 +7,9 @@ class GroupManager extends Manager {
         super(client, client.api.teams.get, Group);
     }
 
+    /**
+     * Get cached groups
+     */
     get cache () {
         return this.client.cache.groups;
     }
@@ -25,7 +28,11 @@ class GroupManager extends Manager {
         return transformed;
     }
 
-    async fetch (id) {
+    /**
+     * Fetch all groups, cache the response, and return it
+     * @returns {Collection<string, Group>}
+     */
+    async fetch () {
         const { groups } = await this.client.api.teams.get();
         return Collection.fromArray(groups.map(this._transform.bind(this)));
     }
