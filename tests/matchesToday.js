@@ -6,12 +6,10 @@ const client = worldcup();
 
 
 async function main () {
-    await client.matches.fetch({ detailed: false, dateRange: 'current' });
+    console.log(await client.matches.fetch());
 
-    console.log(client.matches.cache);
-    await client.matches.fetch({ detailed: true, dateRange: 'current' });
+    await client.matches.fetch();
 
-    console.log(client.matches.cache);
 }
 
 main();

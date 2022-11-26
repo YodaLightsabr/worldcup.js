@@ -19,7 +19,7 @@ class Collection extends Map {
         return new Collection(Object.entries(object));
     }
 
-    static fromArray (array, indexable) {
+    static fromArray (array, indexable = 'id') {
         const collection = new Collection();
         for (const item of array) {
             if (item?.[indexable]) {
