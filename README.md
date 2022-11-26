@@ -3,7 +3,11 @@
 ## Installation
 
 ```sh
-npm i worldcup.js
+# with npm
+npm install worldcup.js
+
+# with yarn
+yarn add worldcup.js
 ```
 
 ## Usage
