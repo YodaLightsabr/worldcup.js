@@ -115,6 +115,7 @@ Properties:
 - `goalsFor`:	    `number` Goals for this team
 - `goalsAgainst`:	`number` Goals against this team
 - `goalDifferential`:	`number` Difference in goals scored to goals against
+- `flag`:           `string` A URL to the country flag image
 
 ### `MatchTime`
 

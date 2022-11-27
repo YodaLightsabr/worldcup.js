@@ -49,6 +49,10 @@ class Team extends BaseData {
     static transformations () {
         return transformations;
     }
+
+    get flag () {
+        return `https://api.fifa.com/api/v3/picture/flags-sq-3/${this.country}`;
+    }
 }
 
 module.exports = Team;
