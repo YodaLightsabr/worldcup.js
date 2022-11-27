@@ -1,5 +1,5 @@
 class Collection extends Map {
-    
+
     /**
      * Create a Collection
      * @constructor
@@ -14,7 +14,7 @@ class Collection extends Map {
      * @returns {Array}
      */
     toArray () {
-        return this.values();
+        return [ ...this.values() ];
     }
 
     /**
@@ -22,7 +22,7 @@ class Collection extends Map {
      * @returns {*}
      */
     first () {
-        return this.values()[0];
+        return ([ ...this.values() ])[0];
     }
 
     /**
@@ -30,7 +30,7 @@ class Collection extends Map {
      * @returns {*}
      */
     last () {
-        return this.values()[-1];
+        return ([ ...this.values() ])[-1];
     }
 
     /**
