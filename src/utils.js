@@ -26,6 +26,19 @@ function formatDate (date) {
     return [year, month, day].join('-');
 }
 
+function snakeToCamelCase (snakeCaseObject) {
+    const output = {};
+    for (const key in snakeCaseObject) {
+        const segments = key.split('_');
+        let newKey = '';
+        for (const segment of segments) {
+            const chars = segment.split('');
+            newKey += [ chars.shift().toUpperCase(), ...chars ].join('');
+        }
+        output[newKey[0].toLowerCase() + newKey.substring(1)] = snakeCaseObject[key];
+    }
+    return output;
+}
 
 module.exports = {
     parseId: (id) => id.substring(id.indexOf('_') + 1),
@@ -33,5 +46,6 @@ module.exports = {
     sleep: (ms) => new Promise(resolve => setTimeout(resolve, ms)),
     formatDate,
     DataError,
-    APIError
+    APIError,
+    snakeToCamelCase
 };

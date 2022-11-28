@@ -17,7 +17,7 @@ class MatchWeather extends BaseData {
         if (apiMatchWeather instanceof MatchWeather) return apiMatchWeather;
 
         this.match = match;
-        if (!this.match) throw new DataError('MatchWeather must be constructed with a match');
+        if (!this.match) throw new DataError('MatchWeather must be constructed with a Match');
 
         this.#raw = apiMatchWeather;
         this.id = `weather_${this.match.number}`;

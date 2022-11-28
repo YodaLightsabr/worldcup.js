@@ -33,7 +33,7 @@ class Match extends BaseData {
             this.homeTeamCountry = apiMatch.home_team;
         }
         else if (apiMatch.home_team) {
-            this.homeTeam = new MatchTeam(client, apiMatch.home_team, { match: this }, { statistics: apiMatch.home_team_statistics, lineup: apiMatch.home_team_lineup });
+            this.homeTeam = new MatchTeam(client, apiMatch.home_team, { match: this }, { statistics: apiMatch.home_team_statistics, lineup: apiMatch.home_team_lineup, events: apiMatch.home_team_events });
             this.homeTeamId = 'team_' + apiMatch.home_team.country;
             this.homeTeamCountry = apiMatch.home_team.country;
         }
@@ -43,7 +43,7 @@ class Match extends BaseData {
             this.awayTeamCountry = apiMatch.away_team;
         }
         else if (apiMatch.away_team) {
-            this.awayTeam = new MatchTeam(client, apiMatch.away_team, { match: this }, { statistics: apiMatch.away_team_statistics, lineup: apiMatch.away_team_lineup });
+            this.awayTeam = new MatchTeam(client, apiMatch.away_team, { match: this }, { statistics: apiMatch.away_team_statistics, lineup: apiMatch.away_team_lineup, events: apiMatch.away_team_events });
             this.awayTeamId = 'team_' + apiMatch.away_team.country;
             this.awayTeamCountry = apiMatch.away_team.country;
         }
