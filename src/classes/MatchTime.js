@@ -19,6 +19,8 @@ class MatchTime extends BaseData {
         this.match = match;
         if (!this.match) throw new DataError('MatchTime must be constructed with a match');
 
+        if (this.currentTime?.endsWith && this.currentTime.endsWith('\'')) this.minutes = +this.currentTime.substring(0, this.currentTime.length - 1);
+
         this.#raw = apiMatchTime;
         this.id = `time_${this.match.number}`;
     }

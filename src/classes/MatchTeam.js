@@ -1,6 +1,8 @@
 const Match = require('./Group.js');
 const Team = require('./Team.js');
-const { DataError } = require('../utils.js');
+const { DataError, l } = require('../utils.js');
+const Collection = require('./Collection.js');
+const Player = require('./Player.js');
 
 const statisticsTransformations = {
     country: "country",
@@ -27,13 +29,37 @@ const statisticsTransformations = {
 class MatchTeam extends Team {
     #raw;
 
-    constructor (client, apiMatchTeam, { match } = {}, { statistics } = {}) {
+    constructor (client, apiMatchTeam, { match } = {}, { statistics, lineup } = {}) {
         super(client, apiMatchTeam);
 
         if (apiMatchTeam instanceof MatchTeam) return apiMatchTeam;
 
         this.match = match;
         if (!this.match) throw new DataError('MatchTeam must be constructed with a match');
+
+        if (lineup.tactics) this.lineupTactics = lineup.tactics;
+
+        if (lineup) this.startingLineup = Collection.fromArray(
+            lineup.starting_eleven.map(player => 
+                l(new Player(
+                    client,
+                    player,
+                    { match },
+                    { team: new Team(client, apiMatchTeam) }
+                ))
+            )
+        );
+
+        if (lineup) this.substitutes = Collection.fromArray(
+            lineup.substitutes.map(player => 
+                new Player(
+                    client,
+                    player,
+                    { match },
+                    { team: new Team(client, apiMatchTeam) }
+                )
+            )
+        );
 
         if (statistics) this.statistics = MatchTeam.transform(statistics, statisticsTransformations);
 
