@@ -41,12 +41,12 @@ class MatchTeam extends Team {
 
         if (lineup) this.startingLineup = Collection.fromArray(
             lineup.starting_eleven.map(player => 
-                l(new Player(
+                new Player(
                     client,
                     player,
                     { match },
                     { team: new Team(client, apiMatchTeam) }
-                ))
+                )
             )
         );
 
