@@ -1,4 +1,5 @@
 const { EventEmitter } = require('events');
+const { deepEqual } = require('../utils');
 
 class Subscription extends EventEmitter {
     #oldData = {};
@@ -12,7 +13,7 @@ class Subscription extends EventEmitter {
     }
 
     _diff (oldData, newData) {
-        return true;
+        return deepEqual(oldData, newData);
     }
 
     start () {
