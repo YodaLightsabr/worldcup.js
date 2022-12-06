@@ -2,4 +2,6 @@ const worldcup = require('../src/index.js');
 
 const client = worldcup();
 
-client.matches.fetch({ dateRange: 'current' }).then(a => console.log(a.first().homeTeam.events));
+const matches = client.matches.fetch({ dateRange: 'current' });
+
+matches.then(console.log);

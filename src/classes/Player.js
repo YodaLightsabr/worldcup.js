@@ -10,7 +10,6 @@ class Player extends BaseData {
     #raw;
 
     constructor (client, apiPlayer, { match } = {}, { team }) {
-        console.log(apiPlayer);
         super(client, apiPlayer, transformations);
 
         if (apiPlayer instanceof Player) return apiPlayer;

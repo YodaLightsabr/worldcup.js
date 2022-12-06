@@ -18,7 +18,6 @@ class Subscription extends EventEmitter {
 
     start () {
         if (!this.intervalId) this.intervalId = setInterval(async () => {
-            console.log('finding')
             const data = await this.manager.fetch(this.options);
             const diff = this._diff(this.#oldData, data);
             this.#oldData = data;

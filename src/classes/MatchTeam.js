@@ -38,7 +38,7 @@ class MatchTeam extends Team {
         this.match = match;
         if (!this.match) throw new DataError('MatchTeam must be constructed with a Match');
 
-        if (lineup.tactics) this.lineupTactics = lineup.tactics;
+        if (lineup?.tactics) this.lineupTactics = lineup.tactics;
 
         if (lineup) this.startingLineup = Collection.fromArray(
             lineup.starting_eleven.map(player => 
