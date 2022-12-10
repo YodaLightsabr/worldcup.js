@@ -77,6 +77,7 @@ Properties:
 - `number`:	    `number` Match number
 - `venue`:	    `string` Stadium / venue name
 - `location`:	`string` City / location name
+- `stageName`:	`string` Match stage name
 - `status`:	    `string` Match status
 - `attendance`:	`number` Number of people in attendance
 - `stageName`:	`string` Stage name

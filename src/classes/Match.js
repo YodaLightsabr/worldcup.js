@@ -10,6 +10,7 @@ const transformations = {
     venue: 'venue',
     status: 'status',
     location: 'location',
+    stageName: 'stage_name',
     attendance: 'attendance',
     stageName: 'stage_name',
     timestamp: 'datetime',
