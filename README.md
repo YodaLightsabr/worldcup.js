@@ -76,6 +76,7 @@ Properties:
     - Example: `match_5`
 - `number`:	    `number` Match number
 - `venue`:	    `string` Stadium / venue name
+- `location`:	`string` City / location name
 - `status`:	    `string` Match status
 - `attendance`:	`number` Number of people in attendance
 - `stageName`:	`string` Stage name

@@ -9,6 +9,7 @@ const transformations = {
     number: 'id',
     venue: 'venue',
     status: 'status',
+    location: 'location',
     attendance: 'attendance',
     stageName: 'stage_name',
     timestamp: 'datetime',
