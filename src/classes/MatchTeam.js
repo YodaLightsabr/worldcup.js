@@ -41,7 +41,7 @@ class MatchTeam extends Team {
         if (apiMatchTeam.goals) this.goals = apiMatchTeam.goals;
         if (lineup?.tactics) this.lineupTactics = lineup.tactics;
 
-        if (lineup) this.startingLineup = Collection.fromArray(
+        if (lineup && lineup.starting_eleven) this.startingLineup = Collection.fromArray(
             lineup.starting_eleven.map(player => 
                 new Player(
                     client,
@@ -52,7 +52,7 @@ class MatchTeam extends Team {
             )
         );
 
-        if (lineup) this.substitutes = Collection.fromArray(
+        if (lineup && lineup.substitutes) this.substitutes = Collection.fromArray(
             lineup.substitutes.map(player => 
                 new Player(
                     client,
