@@ -1,6 +1,6 @@
 {
   "name": "worldcup.js",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "World Cup API client",
   "main": "./src/index.js",
   "scripts": {
