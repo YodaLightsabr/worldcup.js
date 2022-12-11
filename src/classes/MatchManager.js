@@ -69,7 +69,7 @@ class MatchManager extends Manager {
                 return await this._fetchByTeam(config.team, searchParams);
             }
         }
-        const matches = await this.client.api.matches.get();
+        const matches = await this.client.api.matches.searchParams(searchParams ?? {}).get();
         return Collection.fromArray(matches.map(this._transform.bind(this)));
     }
 
