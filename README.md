@@ -5,13 +5,14 @@ A JavaScript API client for [worldcupjson.net](https://worldcupjson.net).
 --------------
 ## Installation
 
-```sh
-# with npm
-npm install worldcup.js
+**with npm:**
 
-# with yarn
-yarn add worldcup.js
-```
+`npm install worldcup.js`
+
+**with yarn:**
+
+`yarn add worldcup.js`
+
 
 ## Usage
 
